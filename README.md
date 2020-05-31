@@ -1,15 +1,18 @@
 ### Date created
-Include the date you created this project and README file.
+31.05.2020
 
 ### Project Title
-Replace the Project Title
+Analysis of bikeshare data
 
 ### Description
-Describe what your project is about and what it does
+The project's main purpose is to provide analysis of the bike sharing company in 3 cities: Chicago, New York City and Wahington. The analysis is done in python using a code which allows interaction with the end user.
 
 ### Files used
-Include the files used
+chicago.csv
+new_york_city.csv
+washington.csv
+bikeshare.py
+
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
-
+Udacity Nanodegree Programm: https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104
