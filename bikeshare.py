@@ -16,27 +16,24 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-   
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+
     cities = list()
     for i in CITY_DATA.keys():
         cities.append(i.title())
         cities.append(i)
 
     city = input('Enter the name of the city you would you like to look into: ').lower()
-    while not (city in cities): 
+    while not (city in cities):
         city = input('There is no such a city in our data base. Please try again: ').lower()
-        
-    # TO DO: get user input for month (all, january, february, ... , june)
+
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'all', 'January', 'February', 'March', 'April', 'May', 'June',     'All']
     month = input('Enter the name of the month for which you would like to see the analysis. If you want to see it for all months, please       enter "all": ').lower()
-    while not (month in months): 
+    while not (month in months):
         month = input('There is no such a month. Please try again: ').lower()
-    
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+
     days = ['all', 'All', 'monday', 'Monday', 'tuesday', 'Tuesday', 'wednesday', 'Wednesday', 'thursday', 'Thursday', 'friday', 'Friday', 'saturday', 'Saturday', 'sunday', 'Sunday']
     day = input('Enter the name of the day of the week for which you would like to see the analysis. If you want to see it for all days, please enter "all": ').lower()
-    while not (day in days): 
+    while not (day in days):
         day = input('There is no such a day. Please try again: ').lower()
 
     print('-'*40)
@@ -135,23 +132,23 @@ def trip_duration_stats(df):
 
     # TO DO: display total travel time
     total_time = df['Trip Duration'].sum()
-    
+
     hour = total_time//(60*60)
     m = (total_time-hour*60*60)//60
     s = total_time-(hour*60*60)-(m*60)
-    
+
     print('Total travel time in seconds:', total_time)
     print('Total travel time in hours, minutes and seconds: {}h, {}m, {}s.'.format(hour, m, s))
-    
+
     # TO DO: display mean travel time
     mean_time = df['Trip Duration'].mean()
     hour2 = mean_time//(60*60)
     m2 = (mean_time-hour2*60*60)//60
     s2 = mean_time-(hour2*60*60)-(m2*60)
-    
+
     print('Mean travel time in seconds:', mean_time)
     print('Mean travel time in hours, minutes and seconds: {}h, {}m, {}s.'.format(hour2, m2, s2))
-    
+
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -183,7 +180,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-    
+
 def raw_data(df):
     """Displays 5 first rows of raw data."""
     answer = input('\nWould you like to see the first 5 rows of raw data? Enter yes or no.\n')
@@ -191,7 +188,7 @@ def raw_data(df):
         x = 0
         y = 5
         print(df[df.columns[0:]].iloc[0:5])
-    
+
     """Displays 5 rows more."""
     answer_2 = input('\nWould you like to see 5 rows more? Enter yes or no.\n')
     while answer_2.lower() == 'yes':
@@ -199,7 +196,7 @@ def raw_data(df):
         y += 5
         print(df[df.columns[0:]].iloc[x:y])
         answer_2 = input('\nWould you like to see 5 rows more? Enter yes or no.\n')
-    
+
 def main():
     while True:
         city, month, day = get_filters()
