@@ -2,10 +2,10 @@
 31.05.2020
 
 ### Project Title
-Analysis of bikeshare data
+Analysis of bikeshare data using python
 
 ### Description
-The project's main purpose is to provide analysis of the bike sharing company in 3 cities: Chicago, New York City and Wahington. The analysis is done in python using a code which allows interaction with the end user.
+The project's main purpose is to provide analysis of the data of bike sharing company in 3 cities: Chicago, New York City and Washington. The analysis is done in python using a code which allows interaction with the end user.
 
 ### Files used
 chicago.csv
