@@ -2,9 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
-CITY_DATA = { 'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+CITY_DATA = { 'chicago': 'chicago.csv', 'new york city': 'new_york_city.csv', 'washington': 'washington.csv' }
 
 def get_filters():
     """
@@ -84,17 +82,14 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
     df['month'] = df['Start Time'].dt.month
     popular_month = df['month'].mode()[0]
     print('Most common month:', popular_month)
 
-    # TO DO: display the most common day of week
     df['weekday'] = df['Start Time'].dt.weekday
     popular_weekday = df['weekday'].mode()[0]
     print('Most common day of the week:', popular_weekday)
 
-    # TO DO: display the most common start hour
     df['hour'] = df['Start Time'].dt.hour
     popular_hour = df['hour'].mode()[0]
     print('Most common start hour:', popular_hour)
